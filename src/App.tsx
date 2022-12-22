@@ -5,7 +5,6 @@ import axios from 'axios';
 
 function App() {
   const apimUrl = 'https://rmaik-test-apim.azure-api.net/api/weather';
-  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=2401b4c393ad70dc5a8e56b9805ba118`;
 
   const sendRequest = () => {
     axios.get(apimUrl).then((response) => {
