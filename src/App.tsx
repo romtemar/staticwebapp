@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function App() {
   const testRequest = async () => {
-    await axios.get('https://rmaik-test-apim1.azure-api.net/api/testget', {}).then((response) => {
+    await axios.get('/api/testget', {}).then((response) => {
       console.log(response.status);
     });
   }
