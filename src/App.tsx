@@ -4,7 +4,7 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  const sendRequest = async () => {
+  const testRequest = async () => {
     await axios.get('https://rmaik-test-apim1.azure-api.net/api/testget', {}).then((response) => {
       console.log(response.status);
     });
@@ -19,7 +19,7 @@ function App() {
         </p>
         <button
           className="App-link"
-          onClick={sendRequest}
+          onClick={testRequest}
         >
           Send Request
         </button>
