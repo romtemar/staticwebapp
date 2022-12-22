@@ -4,11 +4,12 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  const apimUrl = 'https://rmaik-test-apim.azure-api.net/api/weather';
-
-  const sendRequest = () => {
-    axios.get(apimUrl).then((response) => {
-      console.log(response.data);
+  const sendRequest = async () => {
+    await axios.get('https://rmaik-test-apim.azure-api.net/api/weather', {
+      headers: {
+        'Ocp-Apim-Subscription-Key':'59a7d25d13d54904b31be80c8570c3a5'
+      }
+    }).then((response) => {
       console.log(response.status);
     });
   }
